@@ -5,42 +5,37 @@
     <a routerLink="/">Logo</a>
 
     <nav>
-      <ul class="flex">
-        <li>
-          <a
-            routerLink="/posts"
-            routerLinkActive="active"
-            ariaCurrentWhenActive="page"
-            class="ml-5 inline-block hover:text-blue-400 transition"
-            >Posts</a
-          >
-        </li>
+      <ul class="flex items-center">
         <li>
           <a
             routerLink="/about"
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
             class="ml-5 inline-block hover:text-blue-400 transition"
-            >About</a
           >
+            About
+          </a>
         </li>
+        <li>
+          <a
+            routerLink="/posts"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            class="ml-5 inline-block hover:text-blue-400 transition"
+          >
+            Posts
+          </a>
+        </li>
+
         <li>
           <a
             routerLink="/projects"
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
             class="ml-5 inline-block hover:text-blue-400 transition"
-            >Projects</a
           >
-        </li>
-        <li>
-          <a
-            routerLink="/services"
-            routerLinkActive="active"
-            ariaCurrentWhenActive="page"
-            class="ml-5 inline-block hover:text-blue-400 transition"
-            >Services</a
-          >
+            Projects
+          </a>
         </li>
         <li>
           <a
@@ -48,8 +43,29 @@
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
             class="ml-5 inline-block hover:text-blue-400 transition"
-            >Contact</a
           >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/sign-in"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            class="ml-5 inline-block transition py-2 px-4 border border-blue-400 bg-white text-blue-400 rounded-md hover:text-white hover:bg-blue-400"
+          >
+            Sign in
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/sign-up"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            class="ml-5 inline-block transition py-2 px-4 border border-blue-400 bg-blue-400 text-white rounded-md hover:text-blue-400 hover:bg-white"
+          >
+            Sign up
+          </a>
         </li>
       </ul>
     </nav>
