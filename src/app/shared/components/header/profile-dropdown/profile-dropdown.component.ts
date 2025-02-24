@@ -18,5 +18,6 @@ export class ProfileDropdownComponent {
 
   logout() {
     this.authService.signOut();
+    this.isOpen = false;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal, WritableSignal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AuthService } from '../../../core/auth/auth.service';
 import { ProfileDropdownComponent } from './profile-dropdown';
@@ -9,11 +9,12 @@ import { ProfileDropdownComponent } from './profile-dropdown';
   imports: [RouterLink, RouterLinkActive, ProfileDropdownComponent],
 })
 export class HeaderComponent implements OnInit {
-  isAuthenticated: boolean = false;
+  isAuthenticated: WritableSignal<boolean> = signal(false);
 
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.isAuthenticated = this.authService.isAuthenticated();
+    console.log(this.authService.isAuthenticated());
+    this.isAuthenticated.set(this.authService.isAuthenticated());
   }
 }
