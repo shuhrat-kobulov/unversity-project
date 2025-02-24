@@ -1,0 +1,11 @@
+<h2
+  class="text-lg font-bold whitespace-nowrap overflow-hidden text-ellipsis mb-2 capitalize"
+>
+  {{ post.title }}
+</h2>
+<p class="mb-2">{{ post.body }}</p>
+<a
+  class="cursor-pointer text-blue-400 text-right hover:opacity-80"
+  [routerLink]="['/posts', post.id]"
+  >Read More</a
+>

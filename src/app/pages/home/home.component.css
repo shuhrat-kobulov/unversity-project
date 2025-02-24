@@ -1,0 +1,42 @@
+.drag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.drag-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+}
+
+.drag-item:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.drag-handle {
+  cursor: grab;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #777;
+}
+
+.user-info {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.delete-icon {
+  color: red;
+  cursor: pointer;
+  padding: 0 10px;
+}
