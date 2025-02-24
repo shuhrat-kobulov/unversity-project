@@ -8,6 +8,7 @@ import { PostsComponent } from './pages/posts';
 import { PostComponent } from './pages/post';
 import { SignInComponent } from './pages/sign-in';
 import { SignUpComponent } from './pages/sign-up';
+import { AuthGuard } from './core/auth/guards/auth.guard';
 
 export const routes: Routes = [
   {
@@ -37,6 +38,7 @@ export const routes: Routes = [
   {
     path: 'projects',
     component: ProjectsComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'services',

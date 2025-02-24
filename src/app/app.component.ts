@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './shared/components/header';
-import { FooterComponent } from './shared/components/footer';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { AuthInterceptor } from './core/auth/jwt.interceptor';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,8 @@ import { FooterComponent } from './shared/components/footer';
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
 })
-export class AppComponent {
-  title = 'test2';
-}
+export class AppComponent {}

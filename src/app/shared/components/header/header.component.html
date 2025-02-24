@@ -47,6 +47,7 @@
             Contact
           </a>
         </li>
+        @if(!isAuthenticated) {
         <li>
           <a
             routerLink="/sign-in"
@@ -67,6 +68,11 @@
             Sign up
           </a>
         </li>
+        } @else {
+        <li>
+          <app-profile-dropdown></app-profile-dropdown>
+        </li>
+        }
       </ul>
     </nav>
   </div>
