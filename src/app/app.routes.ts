@@ -9,11 +9,17 @@ import { PostComponent } from './pages/post';
 import { SignInComponent } from './pages/sign-in';
 import { SignUpComponent } from './pages/sign-up';
 import { AuthGuard } from './core/auth/guards/auth.guard';
+import { AmityComponent } from './pages/amity';
+import { NotFoundComponent } from './shared/components/not-found';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  {
+    path: 'amity',
+    component: AmityComponent,
   },
   {
     path: 'sign-in',
@@ -47,5 +53,9 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
